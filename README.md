@@ -128,9 +128,76 @@ Ref: session_participants.user_id > users.user_id
 Ref: reviews.session_id > sessions.session_id
 Ref: reviews.reviewer_id > users.user_id
 </pre>
+
 ---
 
-### ERD Diagram
+## Structural Diagrams
 
+### **Entity-Relationship Diagram (ERD)**
+**Visual:** ![ERD](https://github.com/iskon20/StudyBuddy-System-Analysis-Design/blob/main/diagrams/dbml.png)
 
+* **Description**: This diagram illustrates the complete database schema. It details core entities such as `Users`, `StudySessions`, `Subjects`, and `Enrollments`, along with their specific attributes and constraints.
+* **Key Relationships**: Defines how data points connect, including **One-to-Many** (e.g., one Mentor to many Sessions) and **Many-to-Many** (e.g., Students to Sessions) relationships.
+* **Technical Purpose**: Acts as the technical blueprint for backend development, ensuring data integrity and efficient query performance.
 
+### **Use Case Diagram**
+**Visual:** ![Use Case](https://github.com/iskon20/StudyBuddy-System-Analysis-Design/blob/main/diagrams/use_case_diagram.png)
+
+* **Description**: Visualizes the interactions between the system's primary actors and their specific goals.
+* **Roles & Actions**:
+    * **Student**: Search for sessions, register for classes, and download materials.
+    * **Mentor**: Create session schedules, manage participant lists, and upload resources.
+    * **Admin**: Moderate content, manage user accounts, and access system analytics.
+* **Functional Purpose**: Defines the functional scope of the project and clarifies "who" can perform "which" actions within the system.
+
+---
+
+## 2. Behavioral & Process Diagrams
+
+### **BPMN Diagram (Business Process Model and Notation)**
+**Visual:** ![BPMN](https://github.com/iskon20/StudyBuddy-System-Analysis-Design/blob/main/diagrams/bpmn_diagram.png)
+
+* **Workflow**: *“Join Study Session”*
+* **Description**: Illustrates the end-to-end user journey from selecting a session and passing validation checks (like seat availability) to receiving a final confirmation and calendar invite.
+* **Business Purpose**: Provides a high-level view of the business logic, including decision gateways and error handling (e.g., handling "Session Full" scenarios).
+
+### **Sequence Diagram**
+**Visual:** ![Sequence Diagram](https://github.com/iskon20/StudyBuddy-System-Analysis-Design/blob/main/diagrams/sequence_diagram.png)
+
+* **Interaction Flow**: `Student` → `System` → `Sessions` → `SessionParticipants`
+* **Description**: A detailed technical breakdown of the chronological interactions between system components and the database.
+* **Implementation Purpose**: Shows exactly how objects communicate via API calls and database queries in real-time. It serves as a roadmap for developers to implement the specific order of operations required to complete a transaction.
+
+---
+
+## ⏳ 5-Week Roadmap
+
+The project development is divided into five key phases, moving from initial analysis to a complete technical blueprint.
+
+| Week | Phase | Deliverables |
+|:---:|:---|:---|
+| **1** | **Requirement Analysis** | Functional & Non-functional requirements, User Personas. |
+| **2** | **BPMN Modeling** | BPMN diagrams for "Joining" and "Creating" study sessions. |
+| **3** | **System Design** | UML Use Case, Sequence, and Activity diagrams. |
+| **4** | **Data Architecture** | ERD, DBML, Data Dictionary, and UI/UX mockups. |
+| **5** | **Finalization** | Comprehensive project documentation, final report, and presentation. |
+
+---
+
+## ✅ Expected Outcomes
+
+Upon completion of the design phase, the following assets will be delivered:
+
+* **Full System Requirements Specification (SRS):** Detailed documentation of all system constraints and capabilities.
+* **Complete UML Diagrams Suite:** Visual models of system behavior and object interactions.
+* **ERD & Relational Database Blueprint:** A structured data model ready for SQL implementation.
+* **Interactive UI/UX Prototype:** High-fidelity wireframes showing the user journey.
+* **Software Design Plan:** A production-ready roadmap for the development team.
+
+---
+
+## 🧾 Conclusion
+
+**StudyBuddy** facilitates structured collaborative learning, improves efficiency, and simplifies session tracking. 
+
+By combining a solid database foundation, detailed process modeling, and intuitive UI/UX design, the platform provides a robust framework ready for immediate software development and future scalability.
