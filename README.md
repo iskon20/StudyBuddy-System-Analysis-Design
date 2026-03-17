@@ -1,4 +1,4 @@
-# 🏫 StudyBuddy - Smart Student Collaboration Platform
+#StudyBuddy - Smart Student Collaboration Platform
 
 **Academic Year:** 2026  
 **Course:** System Analysis and Design  
