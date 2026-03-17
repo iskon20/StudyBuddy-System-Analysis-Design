@@ -6,7 +6,7 @@
 
 ---
 
-## 👥 Team Members & Roles
+## 👥 Team Members
 
 | Name | Student ID | Group | Role | Contact |
 |------|------------|--------|------|---------|
